@@ -58,10 +58,6 @@ public class InternetConnection extends ConnectivityManager.NetworkCallback impl
                 .build();
     }
 
-
-    /**
-     *  This function will only be called when the activity is created.
-     */
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     public void onPreCheck() {
 
@@ -142,8 +138,6 @@ public class InternetConnection extends ConnectivityManager.NetworkCallback impl
         super.onAvailable(network);
         Log.d(TAG, "onAvailable: " + network.toString()); // Provides the id of the network.
         listen(true);
-//        if(!isAvailable) listener.onInternetConnectionAvailable();
-//        isAvailable = true;
     }
 
     /**
